@@ -9,6 +9,6 @@ WORKDIR /app
 ADD . /app
 
 RUN  --mount=type=secret,id=_env,dst=/etc/secrets/.env deno cache main.ts
-RUN  --mount=type=secret,id=_env,dst=/etc/secrets/.env cat /etc/secrets/.env cat /etc/secrets/APIKEY
+RUN  --mount=type=secret,id=_env,dst=/etc/secrets/.env cat /etc/secrets/.env 
 
 CMD ["run", "-A", "main.ts"]
