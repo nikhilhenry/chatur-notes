@@ -4,6 +4,8 @@ import { serve } from "https://deno.land/std@0.175.0/http/server.ts";
 
 const apiKey = Deno.env.get("API_KEY");
 
+console.log(`API key is ${apiKey}`);
+
 const getCompletion = async (prompt: string, token: number) => {
     const configuration = new Configuration({
         apiKey: apiKey,
