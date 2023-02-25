@@ -24,7 +24,7 @@ const getCompletion = async (prompt: string, token: number) => {
 async function handler(req: Request): Promise<Response> {
     const data = await req.json();
     console.log(data);
-    const prompt = "give me notes on the following material " + data.content;
+    const prompt = data.content;
 
     const response = await getCompletion(prompt, 100);
 
