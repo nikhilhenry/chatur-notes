@@ -26,7 +26,7 @@ async function handler(req: Request): Promise<Response> {
     console.log(data);
     const prompt = data.content;
 
-    const response = await getCompletion(prompt, 100);
+    const response = await getCompletion(prompt, 1000);
 
     return new Response(response[0].text);
 }
